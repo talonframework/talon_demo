@@ -1,0 +1,41 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    meta content="" name="description"
+    meta content="" name="author"
+    title Hello ApplicationName!
+    link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
+
+    link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"
+    link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" 
+
+  body
+    .wrapper
+      .sidebar data-active-color="rose" data-background-color="black" 
+      .main-panel
+        .content
+          = render @view_module, @view_template, assigns
+        footer.footer
+          .container-fluid
+            nav.pull-left
+              ul
+                li
+                  a href="#" home
+                li
+                  a href="#" Company
+                li
+                  a href="#" Portfolio
+                li
+                  a href="#" Blog
+            / p.copyright.pull-right
+            /   &copy; 
+            /   javascript:
+            /     document.write(new Date().getFullYear())
+                
+
+    script src="#{static_path(@conn, "/js/app.js")}"
+    script src="#{static_path(@conn, "/js/vendor.js")}"
+    = render "datatable.html"

@@ -1,0 +1,10 @@
+h2 Show tag
+
+ul
+  li
+    strong Name:&nbsp;
+    = @tag.name
+
+= link "Edit", to: tag_path(@conn, :edit, @tag)
+| &nbsp;
+= link "Back", to: tag_path(@conn, :index)

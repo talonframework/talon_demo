@@ -1,0 +1,16 @@
+h2 Show state
+
+ul
+  li
+    strong Name:&nbsp;
+    = @state.name
+  li
+    strong Abbr:&nbsp;
+    = @state.abbr
+  li
+    strong Country:&nbsp;
+    = @state.country_id
+
+= link "Edit", to: state_path(@conn, :edit, @state)
+| &nbsp;
+= link "Back", to: state_path(@conn, :index)

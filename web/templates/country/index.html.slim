@@ -1,0 +1,36 @@
+
+.container-fluid
+  .row
+    .col-md-12
+      .card
+        .card-header.card-header-icon data-background="purple"
+          i.material-icons assignment
+        .card-content
+          h4.card-title Countries
+          .toolbar List of Countries
+          .material-datatables
+            table#datatables.table.table-striped.table-no-bordered-table-hover cellspacing="0" width="100%" style="width:100%"
+              thead
+                tr
+                  <
+                  th Name
+                  th Code
+                  th.disable-sorting.text-right Actions
+              tfoot
+                tr
+                  th Name
+                  th Code
+                  th.text-right Actions
+              tbody
+                = for country <- @countries do
+                  tr
+                    td= country.name
+                    td= country.code
+                    td class="text-right"
+                      = link [to: country_path(@conn, :show, country), class: "btn btn-simple btn-info btn-icon info"] do
+                        i.material-icons info
+                      = link [to: country_path(@conn, :edit, country), class: "btn btn-simple btn-warning btn-icon edit"] do
+                      /= link [to: country_path(@conn, :delete, country), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"] do
+                      /  i.material-icons mode_edit
+                      = link [to: country_path(@conn, :delete, country), class: "btn btn-simple btn-danger btn-icon delete"] do
+                        i.material-icons close

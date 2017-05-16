@@ -1,0 +1,5 @@
+h2 New tag
+
+= render "form.html", changeset: @changeset, action: tag_path(@conn, :create)
+
+= link "Back", to: tag_path(@conn, :index)

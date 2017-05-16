@@ -1,0 +1,13 @@
+h2 Show country
+
+ul
+  li
+    strong Name:&nbsp;
+    = @country.name
+  li
+    strong Code:&nbsp;
+    = @country.code
+
+= link "Edit", to: country_path(@conn, :edit, @country)
+| &nbsp;
+= link "Back", to: country_path(@conn, :index)

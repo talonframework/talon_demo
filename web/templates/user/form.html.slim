@@ -1,0 +1,73 @@
+.container-fluid
+  .row
+    .col-md-12
+      = if @changeset.action do
+        .alert.alert-danger
+          p Oops, something went wrong! Please check the errors below.
+      .card
+        = form_for @changeset, @action, [class: "form-horizontal"], fn f ->
+          .card-header.card-header-text data-background-color="rose"
+            h4.card-title = @label
+          .card-content
+            .row
+              = label f, :name, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = text_input f, :name, class: "form-control"
+                  = error_tag f, :name
+            .row
+              = label f, :email, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = text_input f, :email, class: "form-control"
+                  = error_tag f, :email
+            .row
+              = label f, :steet, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = text_input f, :street, class: "form-control"
+                  = error_tag f, :street
+            .row
+              = label f, :city, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = text_input f, :city, class: "form-control"
+                  = error_tag f, :city
+            .row
+              = label f, :zip_code, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = text_input f, :zip_code, class: "form-control"
+                  = error_tag f, :zip_code
+            .row
+              = label f, :active, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = checkbox f, :active, class: "form-control"
+                  = error_tag f, :active
+            .row
+              = label f, :birthdate, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = date_select f, :birthdate, class: "form-control"
+                  = error_tag f, :birthdate
+            .row
+              = label f, :height, class: "col-sm-2 label-on-left"
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                = number_input f, :height, class: "form-control"
+                = error_tag f, :height
+            .row
+              label.col-sm-2
+              .col-sm-10
+                .form-group.label-floating.is-empty
+                  label.control-label
+                  = submit "Submit", class: "btn btn-fill btn-rose"

@@ -1,0 +1,5 @@
+h2 Edit country
+
+= render "form.html", changeset: @changeset, action: country_path(@conn, :update, @country)
+
+= link "Back", to: country_path(@conn, :index)

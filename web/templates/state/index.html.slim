@@ -1,0 +1,23 @@
+h2 Listing states
+
+table.table
+  thead
+    tr
+      th Name
+      th Abbr
+      th Country
+      th
+  tbody
+    = for state <- @states do
+      tr
+        td= state.name
+        td= state.abbr
+        td= state.country_id
+        td class="text-right"
+          = link "Show", to: state_path(@conn, :show, state), class: "btn btn-default btn-xs"
+          | &nbsp;
+          = link "Edit", to: state_path(@conn, :edit, state), class: "btn btn-default btn-xs"
+          | &nbsp;
+          = link "Delete", to: state_path(@conn, :delete, state), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"
+
+= link "New state", to: state_path(@conn, :new)
