@@ -7,7 +7,7 @@
         .card-header.card-header-icon data-background="purple"
           i.material-icons assignment
         .card-content
-          h4.card-title <%= @resource_module.card_title() %>
+          h4.card-title <%= @resource_module.index_card_title() %>
           .toolbar <%= @resource_module.tool_bar() %>
           .material-datatables
             table#datatables.table.table-striped.table-no-bordered-table-hover cellspacing="0" width="100%" style="width:100%"

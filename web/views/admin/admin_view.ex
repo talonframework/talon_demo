@@ -13,10 +13,14 @@ defmodule ExAdmin.AdminView do
     #   [module: module]
     #   |> Keyword.merge(index_meta)
     IO.puts ".... resource_name: #{inspect resource_name}, resource_module: #{inspect resource_module}"
-    templ = EEx.eval_file("web/templates/admin/#{theme}/generators/index.html.eex", assigns: [resource_module: resource_module])
-    File.mkdir_p("web/templates/admin/#{theme}/#{resource_name}")
-    File.write("web/templates/admin/#{theme}/#{resource_name}/index.html.slim", templ) 
+    for action <- [:index, :edit, :form, :new] do
+      IO.puts "doing action: #{inspect action}"
+      templ = EEx.eval_file("web/templates/admin/#{theme}/generators/#{action}.html.eex", assigns: [resource_module: resource_module])
+      File.mkdir_p("web/templates/admin/#{theme}/#{resource_name}")
+      File.write("web/templates/admin/#{theme}/#{resource_name}/#{action}.html.slim", templ) 
+    end
   end
+
 
   # def render(path, bindings) do
   #   IO.puts "path: #{inspect path}"

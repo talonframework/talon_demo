@@ -1,0 +1,7 @@
+.container-fluid
+  .row
+    .col-md-12
+      .box
+        .box-header
+          .box-title <%= @resource_module.index_card_title() %>
+        .box-body

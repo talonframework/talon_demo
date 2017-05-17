@@ -1,0 +1,37 @@
+.container-fluid
+  .row
+    .col-md-12
+      .box
+        .box-header
+          .box-title <%= @resource_module.index_card_title() %>
+        .box-body
+          table#datatables.table.table-bordered.table-hover
+            thead
+              tr
+                <%= for name <- @resource_module.index_columns() do %>
+                  th <%= name %>
+                <% end %>
+                th.disable-sorting.text-right Actions
+            tbody
+              = for resource <- @resources do
+                tr
+                  <%= for name <- @resource_module.index_columns() do %>
+                    td= Map.get(resource, <%= ":#{name}" %>)
+                  <% end %>
+
+                  td class="text-right"
+                    /= link [to: ExAdmin.Utils.admin_resource_path(resource, :show), type: "button", class: "btn btn-sm btn-warning"] do
+                    button.btn.btn-xs.btn-warning type="button"
+                      i.fa.fa-pencil-square-o
+                    / = link [to: ExAdmin.Utils.admin_resource_path(resource, :edit), class: "btn btn-simple btn-warning btn-icon edit"] do
+                    /= link [to: country_path(@conn, :delete, country), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"] do
+                    /  i.material-icons mode_edit
+                    / = link [to: ExAdmin.Utils.admin_resource_path(resource, :destroy), type: "button", class: "btn btn-sm btn-danger"] do
+                    button.btn.btn-xs.btn-danger type="button"
+                      i.fa.fa-times
+            tfoot
+              tr
+                <%= for name <- @resource_module.index_columns() do %>
+                  th <%= name %>
+                <% end %>
+                th.disable-sorting.text-right Actions

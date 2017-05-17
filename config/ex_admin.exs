@@ -7,6 +7,6 @@ config :ex_admin, resources: [
 ], 
 module: NewAdmin,
 messages_backend: NewAdmin.Gettext,
-theme: "material_bootstrap",
+theme: "admin_lte",
 schema_adapter: ExAdmin.Schema.Adapters.Ecto
 
