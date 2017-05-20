@@ -1,4 +1,5 @@
 = form_for @changeset, @action, fn f ->
+  - IO.inspect f
   = if @changeset.action do
     .alert.alert-danger
       p Oops, something went wrong! Please check the errors below.

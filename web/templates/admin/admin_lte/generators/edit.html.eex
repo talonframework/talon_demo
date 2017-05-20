@@ -5,4 +5,4 @@
         .alert.alert-danger
           p Oops, something went wrong! Please check the errors below.
       .box.box-info
-        = render "form.html", changeset: @changeset, resource: @resource, action: ExAdmin.Utils.admin_resource_path(@resource, :update)
+        = render "form.html", changeset: @changeset, resource: @resource, action: ExAdmin.Utils.admin_resource_path(@resource, :update), ex_admin: @conn.assigns[:ex_admin] || %{}

@@ -39,4 +39,5 @@ defmodule NewAdmin.Endpoint do
     signing_salt: "etWsFJNB"
 
   plug NewAdmin.Router
+  # plug ExAdmin.Plug.Controller, scope: "admin"
 end

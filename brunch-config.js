@@ -18,9 +18,12 @@ exports.config = {
         "css/app.css": [
           "web/static/vendor/admin-lte/bootstrap/css/bootstrap.min.css",
           "web/static/vendor/admin-lte/plugins/datatables/dataTables.bootstrap.css",
-          "web/static/vendor/admin-lte/dist/css/AdminLTE.min.css",
-          "web/static/vendor/admin-lte/dist/css/skins/_all-skins.min.css",
+          "web/static/vendor/admin-lte/dist/css/AdminLTE.min.css"
+        ],
+        "css/all_themes.css": [
+          "web/static/vendor/admin-lte/dist/css/skins/_all-skins.css"
         ]
+        
       }
     },
     templates: {

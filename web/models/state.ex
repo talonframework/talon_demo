@@ -5,6 +5,7 @@ defmodule NewAdmin.State do
     field :name, :string
     field :code, :string
     belongs_to :country, NewAdmin.Country, foreign_key: :country_id
+    has_many :users, NewAdmin.User
 
     timestamps()
   end
