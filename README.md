@@ -28,7 +28,7 @@ The new ExAdmin architecture is under very active development. So, expect signif
 
 Before starting to work on anything, please have a quick conversation with @smpallen99 on the relevant issue on [ex-admin/ex_admin](https://github.com/ex-admin/ex_admin/issues). If an issues does not exist, please create one. For realtime discussions, @smpallen99 can be reached on:
 
-* #exadmin channel in chat.spallen.com (preferred - my own Phoenix chat app)
+* #exadmin channel in https://chat.spallen.com (preferred - my own Phoenix chat app)
 * #exadmin channel in Elixir's slack team
 * skype `wedge99` (one-on-one voice/video)
 
