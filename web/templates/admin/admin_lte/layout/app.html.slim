@@ -8,7 +8,7 @@ html lang="en"
     meta content="" name="author"
     title Hello ApplicationName!
     link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
-    link rel="stylesheet" href="#{static_path(@conn, "/css/all_themes.css")}"
+    / link rel="stylesheet" href="#{static_path(@conn, "/css/all_themes.css")}"
     / link rel="stylesheet" href="#{static_path(@conn, "/css/AdminLTE.css")}"
     link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
@@ -29,7 +29,7 @@ html lang="en"
       .content-wrapper style="min-height: 916px;"
         section.content-header
         section.content = render @view_module, @view_template, assigns
-          
+
       footer.main-footer
       / aside.control-sidebar.control-sidebar-dark.control-sidebar-open
 
@@ -39,7 +39,7 @@ html lang="en"
     script src="#{static_path(@conn, "/js/dataTables.bootstrap.js")}"
     script src="#{static_path(@conn, "/js/app.min.js")}"
     script src="#{static_path(@conn, "/js/app.js")}"
-    
-        
+
+
     / script src="#{static_path(@conn, "/js/vendor.js")}"
     = render "datatable.html"

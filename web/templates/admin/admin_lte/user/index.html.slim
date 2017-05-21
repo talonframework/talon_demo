@@ -55,15 +55,12 @@
                     td= Map.get(resource, :country_id)
                   
 
-                  td class="text-right"
-                    /= link [to: ExAdmin.Utils.admin_resource_path(resource, :show), type: "button", class: "btn btn-sm btn-warning"] do
-                    button.btn.btn-xs.btn-warning type="button"
+                  td.text-right.index-actions
+                    button.btn.btn-xs.btn-primary.action-show type="button" data-url="#{ExAdmin.Utils.admin_resource_path(resource, :show)}"
+                      i.fa.fa-info-circle
+                    button.btn.btn-xs.btn-warning.action-edit type="button" data-url="#{ExAdmin.Utils.admin_resource_path(resource, :edit)}"
                       i.fa.fa-pencil-square-o
-                    / = link [to: ExAdmin.Utils.admin_resource_path(resource, :edit), class: "btn btn-simple btn-warning btn-icon edit"] do
-                    /= link [to: country_path(@conn, :delete, country), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"] do
-                    /  i.material-icons mode_edit
-                    / = link [to: ExAdmin.Utils.admin_resource_path(resource, :destroy), type: "button", class: "btn btn-sm btn-danger"] do
-                    button.btn.btn-xs.btn-danger type="button"
+                    button.btn.btn-xs.btn-danger.action-delete type="button"
                       i.fa.fa-times
             tfoot
               tr
@@ -89,3 +86,13 @@
                   th country_id
                 
                 th.disable-sorting.text-right Actions
+javascript:
+  window.onload = function(e) {
+    console.log('on load!!')
+    $('.index-actions button.action-show').on('click', function(e) {
+      window.location = $(this).data('url');
+    })
+    $('.index-actions button.action-edit').on('click', function(e) {
+      window.location = $(this).data('url');
+    })
+  }

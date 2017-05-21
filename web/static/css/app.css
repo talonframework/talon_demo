@@ -1,1 +1,6 @@
 /* This file is for your main application css. */
+
+.index-actions button.action-edit,
+.index-actions button.action-delete {
+  margin-left: 2px;
+}

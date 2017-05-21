@@ -4,43 +4,18 @@ defmodule ExAdmin.AdminView do
 
   theme = Application.get_env :ex_admin, :theme, "default"
 
-  IO.puts "starting compile"
   for {resource_name, resource_module} <- NewAdmin.Admin.resource_map() do
     resource_name = NewAdmin.Admin.template_path_name resource_name
-    # schema_meta = Application.get_env(:ex_admin, schema, [])
-    # index_meta = Keyword.get(schema_meta, :index, [])
-    # module = Module.split(schema) |> List.last |> to_string
-    # admin = 
-    #   [module: module]
-    #   |> Keyword.merge(index_meta)
-    
-    IO.puts ".... resource_name: #{inspect resource_name}, resource_module: #{inspect resource_module}"
-    for action <- [:index, :edit, :form, :new] do
-      IO.puts "doing action: #{inspect action}"
+
+    for action <- [:index, :edit, :form, :new, :show] do
       templ = EEx.eval_file("web/templates/admin/#{theme}/generators/#{action}.html.eex", assigns: [resource_module: resource_module])
       File.mkdir_p("web/templates/admin/#{theme}/#{resource_name}")
-      File.write("web/templates/admin/#{theme}/#{resource_name}/#{action}.html.slim", templ) 
+      File.write("web/templates/admin/#{theme}/#{resource_name}/#{action}.html.slim", templ)
     end
   end
-
-  # create the layout
-
-
-
-  # def render(path, bindings) do
-  #   IO.puts "path: #{inspect path}"
-  #   # "web/templates/admin/" <> path <> ".slim"
-  #   # |> File.read!
-  #   # |> Slime.render(bindings)
-  #   ExAdmin.MaterialBootstrap.Templates.render(path, bindings) 
-  # end
-
 end
-IO.puts "..."
-# IO.inspect Application.get_env(:ex_admin, :resources, [])
-# IO.inspect Application.get_env(:ex_admin, :resources, []) |> Keyword.keys
+
 for resource <- NewAdmin.Admin.schema_names() do
-  IO.puts "resource: #{inspect resource}"
   mod = Module.concat ExAdmin, resource <> "View"
   defmodule mod do
     theme = Application.get_env :ex_admin, :theme, "default"

@@ -2,6 +2,14 @@
   .row
     .col-md-12
       .box
-        .box-header
+        .box-header.with-border
           .box-title <%= @resource_module.index_card_title() %>
-        .box-body
+        .box-body.table-responsive.no-padding
+          .panel_contents
+            table.table.table-hover
+              tbody
+                <%= for name <- @resource_module.index_columns() do %>
+                  tr
+                    th <%= name %>
+                    td= Map.get(@resource, <%= ":#{name}" %>)
+                <% end %>

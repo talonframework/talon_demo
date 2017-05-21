@@ -16,14 +16,16 @@ exports.config = {
     stylesheets: {
       joinTo: {
         "css/app.css": [
+          "web/static/css/app.css",
+          "web/static/vendor/admin-lte/dist/css/skins/all-skins.css",
           "web/static/vendor/admin-lte/bootstrap/css/bootstrap.min.css",
           "web/static/vendor/admin-lte/plugins/datatables/dataTables.bootstrap.css",
           "web/static/vendor/admin-lte/dist/css/AdminLTE.min.css"
         ],
-        "css/all_themes.css": [
-          "web/static/vendor/admin-lte/dist/css/skins/_all-skins.css"
-        ]
-        
+        // "css/all_themes.css": [
+        //   "web/static/vendor/admin-lte/dist/css/skins/_all-skins.css"
+        // ]
+
       }
     },
     templates: {
