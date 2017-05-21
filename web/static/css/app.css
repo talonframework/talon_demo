@@ -4,3 +4,8 @@
 .index-actions button.action-delete {
   margin-left: 2px;
 }
+
+.help-block {
+  color: #dd4b39 !important;
+  font-weight: 600;
+}

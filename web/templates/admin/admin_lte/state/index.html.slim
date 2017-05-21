@@ -53,10 +53,10 @@
 javascript:
   window.onload = function(e) {
     console.log('on load!!')
-    $('.index-actions button.action-show').on('click', function(e) {
+    $('body').on('click', '.index-actions button.action-show', function(e) {
       window.location = $(this).data('url');
     })
-    $('.index-actions button.action-edit').on('click', function(e) {
+    $('body').on('click', '.index-actions button.action-edit', function(e) {
       window.location = $(this).data('url');
     })
   }

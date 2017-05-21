@@ -23,3 +23,5 @@ for resource <- NewAdmin.Admin.schema_names() do
     use ExAdmin.Web, :view
   end
 end
+
+
