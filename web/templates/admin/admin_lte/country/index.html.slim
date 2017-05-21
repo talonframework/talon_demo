@@ -9,8 +9,10 @@
             thead
               tr
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :name)
                   th name
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :code)
                   th code
                 
                 th.disable-sorting.text-right Actions
@@ -18,9 +20,11 @@
               = for resource <- @resources do
                 tr
                   
-                    td= Map.get(resource, :name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :name)
+                    td= value
                   
-                    td= Map.get(resource, :code)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :code)
+                    td= value
                   
 
                   td.text-right.index-actions

@@ -1,0 +1,61 @@
+.container-fluid
+  .row
+    .col-md-12
+      .box
+        .box-header.with-border
+          .box-title Users
+        .box-body.table-responsive.no-padding
+          .panel_contents
+            table.table.table-hover
+              tbody
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :id)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :name)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :email)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :user_name)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :street_num)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :street)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :city)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :zip_code)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :state_id)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :country_id)
+                  tr
+                    th= name
+                    td= value
+                

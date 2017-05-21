@@ -9,7 +9,8 @@
             table.table.table-hover
               tbody
                 <%= for name <- @resource_module.index_columns() do %>
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, <%= ":#{name}" %>)
                   tr
-                    th <%= name %>
-                    td= Map.get(@resource, <%= ":#{name}" %>)
+                    th= name
+                    td= value
                 <% end %>

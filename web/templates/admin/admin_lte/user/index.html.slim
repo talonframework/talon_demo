@@ -9,24 +9,34 @@
             thead
               tr
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :id)
                   th id
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :name)
                   th name
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :email)
                   th email
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :user_name)
                   th user_name
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :street_num)
                   th street_num
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :street)
                   th street
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :city)
                   th city
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :zip_code)
                   th zip_code
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :state_id)
                   th state_id
                 
+                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :country_id)
                   th country_id
                 
                 th.disable-sorting.text-right Actions
@@ -34,25 +44,35 @@
               = for resource <- @resources do
                 tr
                   
-                    td= Map.get(resource, :id)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :id)
+                    td= value
                   
-                    td= Map.get(resource, :name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :name)
+                    td= value
                   
-                    td= Map.get(resource, :email)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :email)
+                    td= value
                   
-                    td= Map.get(resource, :user_name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :user_name)
+                    td= value
                   
-                    td= Map.get(resource, :street_num)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :street_num)
+                    td= value
                   
-                    td= Map.get(resource, :street)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :street)
+                    td= value
                   
-                    td= Map.get(resource, :city)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :city)
+                    td= value
                   
-                    td= Map.get(resource, :zip_code)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :zip_code)
+                    td= value
                   
-                    td= Map.get(resource, :state_id)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :state_id)
+                    td= value
                   
-                    td= Map.get(resource, :country_id)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :country_id)
+                    td= value
                   
 
                   td.text-right.index-actions
