@@ -8,24 +8,18 @@
           table#datatables.table.table-hover.table-striped
             thead
               tr
-                
-                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :name)
-                  th Name
-                
-                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :code)
-                  th Code
-                
+                <%= for name <- @resource_module.display_schema_columns(:index) do %>
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, <%= ":#{name}" %>)
+                  th <%= @resource_module.render_column_name(:index, name) %>
+                <% end %>
                 th.disable-sorting.text-right data-orderable="false" Actions
             tbody
               = for resource <- @resources do
                 tr
-                  
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :name)
+                  <%= for name <- @resource_module.display_schema_columns(:index) do %>
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, <%= ":#{name}" %>)
                     td= value
-                  
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :code)
-                    td= value
-                  
+                  <% end %>
 
                   td.text-right.index-actions
                     button.btn.btn-xs.btn-primary.action-show type="button" data-url="#{ExAdmin.Utils.admin_resource_path(resource, :show)}"
@@ -36,11 +30,9 @@
                       i.fa.fa-times
             tfoot
               tr
-                
-                  th Name
-                
-                  th Code
-                
+                <%= for name <- @resource_module.display_schema_columns(:index) do %>
+                  th <%= @resource_module.render_column_name(:index, name) %>
+                <% end %>
                 th.text-right data-orderable="false" Actions
 javascript:
   window.onload = function(e) {
