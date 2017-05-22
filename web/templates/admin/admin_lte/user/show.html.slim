@@ -9,52 +9,62 @@
             table.table.table-hover
               tbody
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :id)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :name)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :name)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :email)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :email)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :user_name)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :user_name)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :street_num)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :street_num)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :street)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :street)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :city)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :city)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :zip_code)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :zip_code)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :active)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :state_id)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :birthdate)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :country_id)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :height)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :state_id)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :country_id)
                   tr
                     th= name
                     td= value

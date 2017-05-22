@@ -9,17 +9,32 @@
             table.table.table-hover
               tbody
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :name)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :id)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :code)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :name)
                   tr
                     th= name
                     td= value
                 
-                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_show_field(@resource, :country_id)
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :code)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :country_id)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :updated_at)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :inserted_at)
                   tr
                     th= name
                     td= value

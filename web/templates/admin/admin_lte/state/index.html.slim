@@ -5,31 +5,37 @@
         .box-header
           .box-title States
         .box-body
-          table#datatables.table.table-bordered.table-hover
+          table#datatables.table.table-hover.table-striped
             thead
               tr
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :name)
-                  th name
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :id)
+                  th Id
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :code)
-                  th code
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :name)
+                  th Name
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :country_id)
-                  th country_id
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :code)
+                  th Code
                 
-                th.disable-sorting.text-right Actions
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :country_id)
+                  th Country
+                
+                th.disable-sorting.text-right data-orderable="false" Actions
             tbody
               = for resource <- @resources do
                 tr
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :id)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :code)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :name)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :country_id)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :code)
+                    td= value
+                  
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :country_id)
                     td= value
                   
 
@@ -43,13 +49,15 @@
             tfoot
               tr
                 
-                  th name
+                  th Id
                 
-                  th code
+                  th Name
                 
-                  th country_id
+                  th Code
                 
-                th.disable-sorting.text-right Actions
+                  th Country
+                
+                th.text-right data-orderable="false" Actions
 javascript:
   window.onload = function(e) {
     console.log('on load!!')

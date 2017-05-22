@@ -5,19 +5,19 @@
         .box-header
           .box-title <%= @resource_module.index_card_title() %>
         .box-body
-          table#datatables.table.table-bordered.table-hover
+          table#datatables.table.table-hover.table-striped
             thead
               tr
-                <%= for name <- @resource_module.index_columns() do %>
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, <%= ":#{name}" %>)
-                  th <%= name %>
+                <%= for name <- @resource_module.display_schema_columns(:index) do %>
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, <%= ":#{name}" %>)
+                  th <%= @resource_module.render_column_name(:index, name) %>
                 <% end %>
-                th.disable-sorting.text-right Actions
+                th.disable-sorting.text-right data-orderable="false" Actions
             tbody
               = for resource <- @resources do
                 tr
-                  <%= for name <- @resource_module.index_columns() do %>
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, <%= ":#{name}" %>)
+                  <%= for name <- @resource_module.display_schema_columns(:index) do %>
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, <%= ":#{name}" %>)
                     td= value
                   <% end %>
 
@@ -30,10 +30,10 @@
                       i.fa.fa-times
             tfoot
               tr
-                <%= for name <- @resource_module.index_columns() do %>
-                  th <%= name %>
+                <%= for name <- @resource_module.display_schema_columns(:index) do %>
+                  th <%= @resource_module.render_column_name(:index, name) %>
                 <% end %>
-                th.disable-sorting.text-right Actions
+                th.text-right data-orderable="false" Actions
 javascript:
   window.onload = function(e) {
     console.log('on load!!')

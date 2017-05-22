@@ -9,3 +9,9 @@
   color: #dd4b39 !important;
   font-weight: 600;
 }
+/*#datatables td {
+  width: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}*/

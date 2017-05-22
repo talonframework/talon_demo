@@ -5,73 +5,67 @@
         .box-header
           .box-title Users
         .box-body
-          table#datatables.table.table-bordered.table-hover
+          table#datatables.table.table-hover.table-striped
             thead
               tr
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :id)
-                  th id
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :name)
+                  th Name
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :name)
-                  th name
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :email)
+                  th Email
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :email)
-                  th email
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :user_name)
+                  th User Name
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :user_name)
-                  th user_name
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :street_num)
+                  th Num
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :street_num)
-                  th street_num
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :street)
+                  th Street
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :street)
-                  th street
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :city)
+                  th City
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :city)
-                  th city
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :zip_code)
+                  th Zip
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :zip_code)
-                  th zip_code
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :state_id)
+                  th State
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :state_id)
-                  th state_id
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :country_id)
+                  th Country
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :country_id)
-                  th country_id
-                
-                th.disable-sorting.text-right Actions
+                th.disable-sorting.text-right data-orderable="false" Actions
             tbody
               = for resource <- @resources do
                 tr
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :id)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :name)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :email)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :email)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :user_name)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :user_name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :street_num)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :street_num)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :street)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :street)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :city)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :city)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :zip_code)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :zip_code)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :state_id)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :state_id)
-                    td= value
-                  
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :country_id)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :country_id)
                     td= value
                   
 
@@ -85,27 +79,25 @@
             tfoot
               tr
                 
-                  th id
+                  th Name
                 
-                  th name
+                  th Email
                 
-                  th email
+                  th User Name
                 
-                  th user_name
+                  th Num
                 
-                  th street_num
+                  th Street
                 
-                  th street
+                  th City
                 
-                  th city
+                  th Zip
                 
-                  th zip_code
+                  th State
                 
-                  th state_id
+                  th Country
                 
-                  th country_id
-                
-                th.disable-sorting.text-right Actions
+                th.text-right data-orderable="false" Actions
 javascript:
   window.onload = function(e) {
     console.log('on load!!')

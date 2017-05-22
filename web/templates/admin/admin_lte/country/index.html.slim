@@ -5,25 +5,25 @@
         .box-header
           .box-title Countries
         .box-body
-          table#datatables.table.table-bordered.table-hover
+          table#datatables.table.table-hover.table-striped
             thead
               tr
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :name)
-                  th name
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :name)
+                  th Name
                 
-                  / - name = ExAdmin.View.admin_resource(@conn).get_index_field(@resource, :code)
-                  th code
+                  / - name = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, @resource, :code)
+                  th Code
                 
-                th.disable-sorting.text-right Actions
+                th.disable-sorting.text-right data-orderable="false" Actions
             tbody
               = for resource <- @resources do
                 tr
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :name)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :name)
                     td= value
                   
-                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_index_field(resource, :code)
+                    - {_name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:index, resource, :code)
                     td= value
                   
 
@@ -37,11 +37,11 @@
             tfoot
               tr
                 
-                  th name
+                  th Name
                 
-                  th code
+                  th Code
                 
-                th.disable-sorting.text-right Actions
+                th.text-right data-orderable="false" Actions
 javascript:
   window.onload = function(e) {
     console.log('on load!!')
