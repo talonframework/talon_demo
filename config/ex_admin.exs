@@ -4,6 +4,8 @@ config :ex_admin, resources: [
   NewAdmin.ExAdmin.Country,
   NewAdmin.ExAdmin.State,
   NewAdmin.ExAdmin.User,
+  NewAdmin.ExAdmin.Group,
+  NewAdmin.ExAdmin.Tag,
 ],
 module: NewAdmin,
 messages_backend: NewAdmin.Gettext,
