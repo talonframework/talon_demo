@@ -25,7 +25,13 @@ defmodule NewAdmin.Router do
     resources "/users", UserController
   end
 
-  scope "/admin", ExAdmin do
+  scope "/admin", NewAdmin do
+    # pipe_through :api
+    pipe_through :browser
+    get "/:resource/search/:search_terms", AdminResourceController, :search
+  end
+
+  scope "/admin", NewAdmin do
     pipe_through :browser # Use the default browser stack
     admin_routes()
     # get "/:resource", AdminController, :index

@@ -1,0 +1,21 @@
+.container-fluid
+  .row
+    .col-md-12
+      .box
+        .box-header.with-border
+          .box-title Countries
+        .box-body.table-responsive.no-padding
+          .panel_contents
+            table.table.table-hover
+              tbody
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :name)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = ExAdmin.View.admin_resource(@conn).get_schema_field(:show, @resource, :code)
+                  tr
+                    th= name
+                    td= value
+                

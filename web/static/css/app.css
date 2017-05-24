@@ -15,3 +15,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }*/
+table.index_table th.sortable a {
+      background: url("/images/ex_admin/orderable.png") no-repeat 0 4px;
+      padding-left: 13px; }
+table.index_table th.sorted-asc a {
+      background-position: 0 -27px; }
+table.index_table th.sorted-desc a {
+      background-position: 0 -56px; }

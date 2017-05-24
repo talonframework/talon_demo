@@ -27,4 +27,6 @@ defmodule NewAdmin.User do
     |> validate_required([:name, :user_name, :email, :active])
 
   end
+
+  def search_fields, do: [:name, :email, :street]
 end
