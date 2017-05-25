@@ -1,7 +1,7 @@
 .container-fluid
   .row
     .col-md-12#datatable-view
-      = ExAdmin.DatatableView.render_table(@conn, @resources)
+      = AdminLte.DatatableView.render_table(@conn, @resources)
 javascript:
 
   function search_path(value) {

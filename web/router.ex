@@ -14,17 +14,6 @@ defmodule NewAdmin.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", NewAdmin do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
-    resources "/tags", TagController
-    resources "/groups", GroupController
-    resources "/countries", CountryController
-    resources "/states", StateController
-    resources "/users", UserController
-  end
-
   scope "/admin", NewAdmin do
     # pipe_through :api
     pipe_through :browser
@@ -37,6 +26,16 @@ defmodule NewAdmin.Router do
     # get "/:resource", AdminController, :index
   end
 
+  scope "/", NewAdmin do
+    pipe_through :browser # Use the default browser stack
+
+    get "/", PageController, :index
+    resources "/tags", TagController
+    resources "/groups", GroupController
+    resources "/countries", CountryController
+    resources "/states", StateController
+    resources "/users", UserController
+  end
 
 
   # Other scopes may use custom stacks.
