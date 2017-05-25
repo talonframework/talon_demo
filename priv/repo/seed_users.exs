@@ -1,9 +1,6 @@
 alias TalonDemo.{Repo, Country, State, User} #, Tag, Group}
 alias FakerElixir, as: Faker
 
-
-countries = Repo.all Country
-
 states = Repo.all(State) |> Repo.preload([:country])
 
 _users =
