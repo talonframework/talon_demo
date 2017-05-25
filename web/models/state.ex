@@ -1,11 +1,11 @@
-defmodule NewAdmin.State do
-  use NewAdmin.Web, :model
+defmodule TalonDemo.State do
+  use TalonDemo.Web, :model
 
   schema "states" do
     field :name, :string
     field :code, :string
-    belongs_to :country, NewAdmin.Country, foreign_key: :country_id
-    has_many :users, NewAdmin.User
+    belongs_to :country, TalonDemo.Country, foreign_key: :country_id
+    has_many :users, TalonDemo.User
 
     timestamps()
   end

@@ -1,7 +1,7 @@
-defmodule NewAdmin.GroupTest do
-  use NewAdmin.ModelCase
+defmodule TalonDemo.GroupTest do
+  use TalonDemo.ModelCase
 
-  alias NewAdmin.Group
+  alias TalonDemo.Group
 
   @valid_attrs %{description: "some description", name: "some name"}
   @invalid_attrs %{}

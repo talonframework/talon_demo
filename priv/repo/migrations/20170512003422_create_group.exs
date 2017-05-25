@@ -1,4 +1,4 @@
-defmodule NewAdmin.Repo.Migrations.CreateGroup do
+defmodule TalonDemo.Repo.Migrations.CreateGroup do
   use Ecto.Migration
 
   def change do

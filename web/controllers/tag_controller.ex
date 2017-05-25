@@ -1,7 +1,7 @@
-defmodule NewAdmin.TagController do
-  use NewAdmin.Web, :controller
+defmodule TalonDemo.TagController do
+  use TalonDemo.Web, :controller
 
-  alias NewAdmin.Tag
+  alias TalonDemo.Tag
 
   def index(conn, _params) do
     tags = Repo.all(Tag)

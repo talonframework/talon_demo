@@ -12,7 +12,7 @@
     = error_tag f, :abbr
   .form-group
     = label f, :country_id, class: "control-label"
-    = select f, :country_id, NewAdmin.Country.select_all(), class: "form-control"
+    = select f, :country_id, TalonDemo.Country.select_all(), class: "form-control"
     = error_tag f, :country_id
   .form-group
     = submit "Submit", class: "btn btn-primary"

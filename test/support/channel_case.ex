@@ -1,4 +1,4 @@
-defmodule NewAdmin.ChannelCase do
+defmodule TalonDemo.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule NewAdmin.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias NewAdmin.Repo
+      alias TalonDemo.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint NewAdmin.Endpoint
+      @endpoint TalonDemo.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(NewAdmin.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TalonDemo.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(NewAdmin.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(TalonDemo.Repo, {:shared, self()})
     end
 
     :ok

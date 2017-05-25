@@ -1,3 +1,3 @@
-defmodule NewAdmin.CountryView do
-  use NewAdmin.Web, :view
+defmodule TalonDemo.CountryView do
+  use TalonDemo.Web, :view
 end

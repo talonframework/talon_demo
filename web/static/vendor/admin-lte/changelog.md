@@ -33,7 +33,7 @@
 - Fix issue #427 by updating slimscroll
 - Fix isse #683
 - Fix issue #1091
-- Merge branch 'master' of https://github.com/almasaeed2010/AdminLTE
+- Merge branch 'master' of https://github.com/almasaeed2010/TalonLTE
 - Fix issue #995
 - Merge pull request #1094 from xvonabur/patch-2
 - Merge pull request #1006 from Jerome1337/fix-sidebar-label
@@ -42,16 +42,16 @@
 - Merge pull request #1003 from yu1ro/replace-year
 - Merge pull request #1015 from Fl0ux/master
 - Merge pull request #1029 from angelitomg/master
-- Merge branch 'master' of https://github.com/almasaeed2010/AdminLTE
+- Merge branch 'master' of https://github.com/almasaeed2010/TalonLTE
 - Merge pull request #1089 from almasaeed2010/revert-1084-master
-- Merge branch 'master' of https://github.com/almasaeed2010/AdminLTE
+- Merge branch 'master' of https://github.com/almasaeed2010/TalonLTE
 - Merge pull request #1084 from blz-ea/master
-- Merge branch 'master' of https://github.com/almasaeed2010/AdminLTE
+- Merge branch 'master' of https://github.com/almasaeed2010/TalonLTE
 - Update ChartJS to 1.1.1
 - Merge pull request #1061 from freedayko/update-select2
 - Update Readme
 - Merge pull request #1041 from OskarStark/patch-2
-- Update AdminLTE.css
+- Update TalonLTE.css
 - Update app.js
 - Update Select2 plugin to version 4.0.3
 - added missing changelog to README. refs #1040

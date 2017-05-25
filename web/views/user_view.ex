@@ -1,3 +1,3 @@
-defmodule NewAdmin.UserView do
-  use NewAdmin.Web, :view
+defmodule TalonDemo.UserView do
+  use TalonDemo.Web, :view
 end

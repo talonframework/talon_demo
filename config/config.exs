@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :new_admin,
-  ecto_repos: [NewAdmin.Repo]
+config :talon_demo,
+  ecto_repos: [TalonDemo.Repo]
 
 # Configures the endpoint
-config :new_admin, NewAdmin.Endpoint,
+config :talon_demo, TalonDemo.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "v0xGNJKaKveEgSflOiYC4Y4vsO9aDR8TwedYuki5mt9yQef28bYVVFPwnbVV/C9+",
-  render_errors: [view: NewAdmin.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: NewAdmin.PubSub,
+  render_errors: [view: TalonDemo.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: TalonDemo.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
@@ -30,4 +30,4 @@ config :phoenix, :template_engines,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
 
-import_config "ex_admin.exs"
+import_config "talon.exs"

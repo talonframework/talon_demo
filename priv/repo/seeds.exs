@@ -1,33 +1,33 @@
-alias NewAdmin.{Repo, Country, State, User} #, Tag, Group}
+alias TalonDemo.{Repo, Country, State, User} #, Tag, Group}
 alias FakerElixir, as: Faker
 
 Repo.delete_all State
 Repo.delete_all Country
 Repo.delete_all User
 
-countries = 
+countries =
   for _ <- 1..50 do
     co = Faker.Address.make_country()
     Repo.insert! Country.changeset(%Country{}, co)
   end
 
-states = 
+states =
   countries
   |> Enum.take(10)
-  |> Enum.map(fn co -> 
+  |> Enum.map(fn co ->
     for _ <- 1..10 do
       state = Faker.Address.state()
-      {state, code} = 
+      {state, code} =
         state
         |> String.split(" ")
         |> case do
-          [one] -> 
-            code = 
+          [one] ->
+            code =
               one
               |> String.slice(0, 2)
               |> String.upcase
             {state, code}
-          [first, second | _] -> 
+          [first, second | _] ->
             code =
               String.first(first) <> String.first(second)
               |> String.upcase
@@ -39,11 +39,11 @@ states =
   end)
   |> List.flatten
 
-_users = 
-  for _ <- 1..500 do
+_users =
+  for _ <- 1..5000 do
     name = Faker.Name.name()
     state = Enum.random(states)
-    Repo.insert! User.changeset(%User{}, 
+    Repo.insert! User.changeset(%User{},
       %{
         name: name,
         email: Faker.Internet.email(name),

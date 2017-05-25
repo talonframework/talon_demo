@@ -1,7 +1,7 @@
-defmodule NewAdmin.CountryControllerTest do
-  use NewAdmin.ConnCase
+defmodule TalonDemo.CountryControllerTest do
+  use TalonDemo.ConnCase
 
-  alias NewAdmin.Country
+  alias TalonDemo.Country
   @valid_attrs %{abbr: "some abbr", code: 42, name: "some name"}
   @invalid_attrs %{}
 

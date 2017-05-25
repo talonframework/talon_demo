@@ -1,5 +1,5 @@
-defmodule NewAdmin.PageController do
-  use NewAdmin.Web, :controller
+defmodule TalonDemo.PageController do
+  use TalonDemo.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

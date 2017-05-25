@@ -1,7 +1,7 @@
-defmodule NewAdmin.StateController do
-  use NewAdmin.Web, :controller
+defmodule TalonDemo.StateController do
+  use TalonDemo.Web, :controller
 
-  alias NewAdmin.State
+  alias TalonDemo.State
 
   defp preload(schema) do
     # Repo.preload schema, [:country]

@@ -1,10 +1,10 @@
 /**
- * AdminLTE Demo Menu
+ * TalonLTE Demo Menu
  * ------------------
  * You should not use this file in production.
  * This file is for demo purposes only.
  */
-(function ($, AdminLTE) {
+(function ($, TalonLTE) {
 
   "use strict";
 
@@ -220,16 +220,16 @@
    */
   function change_layout(cls) {
     $("body").toggleClass(cls);
-    AdminLTE.layout.fixSidebar();
+    TalonLTE.layout.fixSidebar();
     //Fix the problem with right sidebar and layout boxed
     if (cls == "layout-boxed")
-      AdminLTE.controlSidebar._fix($(".control-sidebar-bg"));
+      TalonLTE.controlSidebar._fix($(".control-sidebar-bg"));
     if ($('body').hasClass('fixed') && cls == 'fixed') {
-      AdminLTE.pushMenu.expandOnHover();
-      AdminLTE.layout.activate();
+      TalonLTE.pushMenu.expandOnHover();
+      TalonLTE.layout.activate();
     }
-    AdminLTE.controlSidebar._fix($(".control-sidebar-bg"));
-    AdminLTE.controlSidebar._fix($(".control-sidebar"));
+    TalonLTE.controlSidebar._fix($(".control-sidebar-bg"));
+    TalonLTE.controlSidebar._fix($(".control-sidebar"));
   }
 
   /**
@@ -301,8 +301,8 @@
 
     $("[data-controlsidebar]").on('click', function () {
       change_layout($(this).data('controlsidebar'));
-      var slide = !AdminLTE.options.controlSidebarOptions.slide;
-      AdminLTE.options.controlSidebarOptions.slide = slide;
+      var slide = !TalonLTE.options.controlSidebarOptions.slide;
+      TalonLTE.options.controlSidebarOptions.slide = slide;
       if (!slide)
         $('.control-sidebar').removeClass('control-sidebar-open');
     });
@@ -320,7 +320,7 @@
 
     $("[data-enable='expandOnHover']").on('click', function () {
       $(this).attr('disabled', true);
-      AdminLTE.pushMenu.expandOnHover();
+      TalonLTE.pushMenu.expandOnHover();
       if (!$('body').hasClass('sidebar-collapse'))
         $("[data-layout='sidebar-collapse']").click();
     });
@@ -337,4 +337,4 @@
     }
 
   }
-})(jQuery, $.AdminLTE);
+})(jQuery, $.TalonLTE);

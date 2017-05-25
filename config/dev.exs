@@ -19,7 +19,7 @@ use Mix.Config
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on
 # different ports.
-config :new_admin, NewAdmin.Endpoint,
+config :talon_demo, TalonDemo.Endpoint,
   http: [port: 4090],
   debug_errors: true,
   code_reloader: true,
@@ -29,7 +29,7 @@ config :new_admin, NewAdmin.Endpoint,
 
 
 # Watch static and templates for browser reloading.
-config :new_admin, NewAdmin.Endpoint,
+config :talon_demo, TalonDemo.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
@@ -47,10 +47,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 40
 
 # Configure your database
-config :new_admin, NewAdmin.Repo,
+config :talon_demo, TalonDemo.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "new_admin_dev",
+  database: "talon_demo_dev",
   hostname: "localhost",
   pool_size: 10

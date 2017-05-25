@@ -1,4 +1,4 @@
-defmodule NewAdmin.Repo.Migrations.CreateTag do
+defmodule TalonDemo.Repo.Migrations.CreateTag do
   use Ecto.Migration
 
   def change do

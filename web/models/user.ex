@@ -1,5 +1,5 @@
-defmodule NewAdmin.User do
-  use NewAdmin.Web, :model
+defmodule TalonDemo.User do
+  use TalonDemo.Web, :model
 
   schema "users" do
     field :name, :string
@@ -12,8 +12,8 @@ defmodule NewAdmin.User do
     field :active, :boolean, default: true
     field :birthdate, :date
     field :height, :integer
-    belongs_to :state, NewAdmin.State, foreign_key: :state_id
-    belongs_to :country, NewAdmin.Country, foreign_key: :country_id
+    belongs_to :state, TalonDemo.State, foreign_key: :state_id
+    belongs_to :country, TalonDemo.Country, foreign_key: :country_id
 
     timestamps()
   end

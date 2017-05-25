@@ -1,4 +1,4 @@
-// AdminLTE Gruntfile
+// TalonLTE Gruntfile
 module.exports = function (grunt) {
 
   'use strict';
@@ -10,7 +10,7 @@ module.exports = function (grunt) {
       tasks: ["less", "uglify"]
     },
     // "less"-task configuration
-    // This task will compile all less files upon saving to create both AdminLTE.css and AdminLTE.min.css
+    // This task will compile all less files upon saving to create both TalonLTE.css and TalonLTE.min.css
     less: {
       // Development not compressed
       development: {
@@ -20,13 +20,13 @@ module.exports = function (grunt) {
         },
         files: {
           // compilation.css  :  source.less
-          "dist/css/AdminLTE.css": "build/less/AdminLTE.less",
-          // AdminLTE without plugins
-          "dist/css/alt/AdminLTE-without-plugins.css": "build/less/AdminLTE-without-plugins.less",
+          "dist/css/TalonLTE.css": "build/less/TalonLTE.less",
+          // TalonLTE without plugins
+          "dist/css/alt/TalonLTE-without-plugins.css": "build/less/TalonLTE-without-plugins.less",
           // Separate plugins
-          "dist/css/alt/AdminLTE-select2.css": "build/less/select2.less",
-          "dist/css/alt/AdminLTE-fullcalendar.css": "build/less/fullcalendar.less",
-          "dist/css/alt/AdminLTE-bootstrap-social.css": "build/less/bootstrap-social.less",
+          "dist/css/alt/TalonLTE-select2.css": "build/less/select2.less",
+          "dist/css/alt/TalonLTE-fullcalendar.css": "build/less/fullcalendar.less",
+          "dist/css/alt/TalonLTE-bootstrap-social.css": "build/less/bootstrap-social.less",
           //Non minified skin files
           "dist/css/skins/skin-blue.css": "build/less/skins/skin-blue.less",
           "dist/css/skins/skin-black.css": "build/less/skins/skin-black.less",
@@ -51,13 +51,13 @@ module.exports = function (grunt) {
         },
         files: {
           // compilation.css  :  source.less
-          "dist/css/AdminLTE.min.css": "build/less/AdminLTE.less",
-          // AdminLTE without plugins
-          "dist/css/alt/AdminLTE-without-plugins.min.css": "build/less/AdminLTE-without-plugins.less",
+          "dist/css/TalonLTE.min.css": "build/less/TalonLTE.less",
+          // TalonLTE without plugins
+          "dist/css/alt/TalonLTE-without-plugins.min.css": "build/less/TalonLTE-without-plugins.less",
           // Separate plugins
-          "dist/css/alt/AdminLTE-select2.min.css": "build/less/select2.less",
-          "dist/css/alt/AdminLTE-fullcalendar.min.css": "build/less/fullcalendar.less",
-          "dist/css/alt/AdminLTE-bootstrap-social.min.css": "build/less/bootstrap-social.less",
+          "dist/css/alt/TalonLTE-select2.min.css": "build/less/select2.less",
+          "dist/css/alt/TalonLTE-fullcalendar.min.css": "build/less/fullcalendar.less",
+          "dist/css/alt/TalonLTE-bootstrap-social.min.css": "build/less/bootstrap-social.less",
           // Skins minified
           "dist/css/skins/skin-blue.min.css": "build/less/skins/skin-blue.less",
           "dist/css/skins/skin-black.min.css": "build/less/skins/skin-black.less",
@@ -135,7 +135,7 @@ module.exports = function (grunt) {
         csslintrc: 'build/less/.csslintrc'
       },
       dist: [
-        'dist/css/AdminLTE.css'
+        'dist/css/TalonLTE.css'
       ]
     },
 

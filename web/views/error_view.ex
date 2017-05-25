@@ -1,5 +1,5 @@
-defmodule NewAdmin.ErrorView do
-  use NewAdmin.Web, :view
+defmodule TalonDemo.ErrorView do
+  use TalonDemo.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

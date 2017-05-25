@@ -1,7 +1,7 @@
-defmodule NewAdmin.StateTest do
-  use NewAdmin.ModelCase
+defmodule TalonDemo.StateTest do
+  use TalonDemo.ModelCase
 
-  alias NewAdmin.State
+  alias TalonDemo.State
 
   @valid_attrs %{abbr: "some abbr", name: "some name"}
   @invalid_attrs %{}

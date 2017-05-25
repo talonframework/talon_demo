@@ -1,5 +1,5 @@
-defmodule NewAdmin.PageControllerTest do
-  use NewAdmin.ConnCase
+defmodule TalonDemo.PageControllerTest do
+  use TalonDemo.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

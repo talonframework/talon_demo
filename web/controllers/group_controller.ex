@@ -1,7 +1,7 @@
-defmodule NewAdmin.GroupController do
-  use NewAdmin.Web, :controller
+defmodule TalonDemo.GroupController do
+  use TalonDemo.Web, :controller
 
-  alias NewAdmin.Group
+  alias TalonDemo.Group
 
   def index(conn, _params) do
     groups = Repo.all(Group)

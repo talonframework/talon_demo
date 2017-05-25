@@ -1,7 +1,7 @@
-defmodule NewAdmin.CountryTest do
-  use NewAdmin.ModelCase
+defmodule TalonDemo.CountryTest do
+  use TalonDemo.ModelCase
 
-  alias NewAdmin.Country
+  alias TalonDemo.Country
 
   @valid_attrs %{abbr: "some abbr", code: 42, name: "some name"}
   @invalid_attrs %{}

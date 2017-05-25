@@ -1,4 +1,4 @@
-defmodule NewAdmin.Repo.Migrations.CreateUser do
+defmodule TalonDemo.Repo.Migrations.CreateUser do
   use Ecto.Migration
 
   def change do

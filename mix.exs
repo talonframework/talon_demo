@@ -1,13 +1,13 @@
-defmodule NewAdmin.Mixfile do
+defmodule TalonDemo.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :new_admin,
+    [app: :talon_demo,
      version: "0.0.1",
      elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
     #  compilers: [:phoenix, :gettext] ++ Mix.compilers,
-     compilers: [:ex_admin, :phoenix, :gettext] ++ Mix.compilers,
+     compilers: [:talon, :phoenix, :gettext] ++ Mix.compilers,
      start_permanent: Mix.env == :prod,
      aliases: aliases(),
      deps: deps()]
@@ -17,8 +17,8 @@ defmodule NewAdmin.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {NewAdmin, []},
-     extra_applications: [:logger, :faker_elixir_octopus, :ex_admin]]
+    [mod: {TalonDemo, []},
+     extra_applications: [:logger, :faker_elixir_octopus, :talon]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,10 +38,10 @@ defmodule NewAdmin.Mixfile do
      {:gettext, "~> 0.11"},
      {:faker_elixir_octopus, "~> 0.12.0", only: [:dev, :test]},
      {:phoenix_slime, github: "slime-lang/phoenix_slime"},
-    #  {:ex_admin, path: "../ex_admin", override: true},
-     {:ex_admin, github: "talonframework/ex_admin", override: true, branch: "server-side-tables"},
-    #  {:ecto_ex_admin, path: "../ecto_ex_admin"},
-     {:ecto_ex_admin, github: "talonframework/ecto_ex_admin"},
+     {:talon, path: "../talon", override: true},
+     # {:talon, github: "talonframework/talon", override: true, branch: "server-side-tables"},
+    #  {:ecto_talon, path: "../ecto_talon"},
+     {:ecto_talon, github: "talonframework/ecto_talon"},
      {:cowboy, "~> 1.0"}]
   end
 

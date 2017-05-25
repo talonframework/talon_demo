@@ -1,5 +1,5 @@
-defmodule NewAdmin.Group do
-  use NewAdmin.Web, :model
+defmodule TalonDemo.Group do
+  use TalonDemo.Web, :model
 
   schema "groups" do
     field :name, :string

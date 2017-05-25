@@ -1,6 +1,6 @@
 {
   "name": "almasaeed2010/adminlte",
-  "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
+  "description": "TalonLTE - admin control panel and dashboard that's based on Bootstrap 3",
   "homepage": "http://almsaeedstudio.com/",
   "keywords": [
     "css",
@@ -21,6 +21,6 @@
   ],
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/almasaeed2010/AdminLTE/issues"
+    "issues": "https://github.com/almasaeed2010/TalonLTE/issues"
   }
 }

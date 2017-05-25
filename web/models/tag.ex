@@ -1,5 +1,5 @@
-defmodule NewAdmin.Tag do
-  use NewAdmin.Web, :model
+defmodule TalonDemo.Tag do
+  use TalonDemo.Web, :model
 
   schema "tags" do
     field :name, :string

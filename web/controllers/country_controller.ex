@@ -1,7 +1,7 @@
-defmodule NewAdmin.CountryController do
-  use NewAdmin.Web, :controller
+defmodule TalonDemo.CountryController do
+  use TalonDemo.Web, :controller
 
-  alias NewAdmin.Country
+  alias TalonDemo.Country
 
   def index(conn, _params) do
     countries = Repo.all(Country)

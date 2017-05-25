@@ -1,3 +1,3 @@
-defmodule NewAdmin.LayoutViewTest do
-  use NewAdmin.ConnCase, async: true
+defmodule TalonDemo.LayoutViewTest do
+  use TalonDemo.ConnCase, async: true
 end

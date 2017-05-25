@@ -1,7 +1,7 @@
-defmodule NewAdmin.UserController do
-  use NewAdmin.Web, :controller
+defmodule TalonDemo.UserController do
+  use TalonDemo.Web, :controller
 
-  alias NewAdmin.User
+  alias TalonDemo.User
 
   def index(conn, _params) do
     users = Repo.all(User) |> Repo.preload([:country, :state])

@@ -1,12 +1,12 @@
-defmodule NewAdmin.Web do
+defmodule TalonDemo.Web do
   @moduledoc """
   A module defining __using__ hooks for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use NewAdmin.Web, :controller
-      use NewAdmin.Web, :view
+      use TalonDemo.Web, :controller
+      use TalonDemo.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -24,7 +24,7 @@ defmodule NewAdmin.Web do
       import Ecto.Changeset
       import Ecto.Query
 
-      def all, do: NewAdmin.Repo.all(__MODULE__)
+      def all, do: TalonDemo.Repo.all(__MODULE__)
     end
   end
 
@@ -32,12 +32,12 @@ defmodule NewAdmin.Web do
     quote do
       use Phoenix.Controller
 
-      alias NewAdmin.Repo
+      alias TalonDemo.Repo
       import Ecto
       import Ecto.Query
 
-      import NewAdmin.Router.Helpers
-      import NewAdmin.Gettext
+      import TalonDemo.Router.Helpers
+      import TalonDemo.Gettext
     end
   end
 
@@ -51,9 +51,9 @@ defmodule NewAdmin.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import NewAdmin.Router.Helpers
-      import NewAdmin.ErrorHelpers
-      import NewAdmin.Gettext
+      import TalonDemo.Router.Helpers
+      import TalonDemo.ErrorHelpers
+      import TalonDemo.Gettext
     end
   end
 
@@ -67,10 +67,10 @@ defmodule NewAdmin.Web do
     quote do
       use Phoenix.Channel
 
-      alias NewAdmin.Repo
+      alias TalonDemo.Repo
       import Ecto
       import Ecto.Query
-      import NewAdmin.Gettext
+      import TalonDemo.Gettext
     end
   end
 

@@ -1,4 +1,4 @@
-defmodule NewAdmin.Repo.Migrations.CreateCountry do
+defmodule TalonDemo.Repo.Migrations.CreateCountry do
   use Ecto.Migration
 
   def change do

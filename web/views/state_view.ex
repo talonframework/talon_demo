@@ -1,3 +1,3 @@
-defmodule NewAdmin.StateView do
-  use NewAdmin.Web, :view
+defmodule TalonDemo.StateView do
+  use TalonDemo.Web, :view
 end

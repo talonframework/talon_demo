@@ -4,7 +4,7 @@
   "main": "dist/js/app.min.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/almasaeed2010/AdminLTE.git"
+    "url": "git://github.com/almasaeed2010/TalonLTE.git"
   },
   "license": "MIT",
   "devDependencies": {

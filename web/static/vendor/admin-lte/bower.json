@@ -1,15 +1,15 @@
 {
-  "name": "AdminLTE",
+  "name": "TalonLTE",
   "homepage": "http://almsaeedstudio.com",
   "authors": [
     "Abdullah Almsaeed <abdullah@almsaeedstudio.com>"
   ],
-  "description": "Admin dashboard and control panel template",
+  "description": "Talon dashboard and control panel template",
   "main": [
     "index2.html",
-    "dist/css/AdminLTE.css",
+    "dist/css/TalonLTE.css",
     "dist/js/app.js",
-    "build/less/AdminLTE.less"
+    "build/less/TalonLTE.less"
   ],
   "keywords": [
     "css",

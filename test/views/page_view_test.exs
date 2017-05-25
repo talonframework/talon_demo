@@ -1,3 +1,3 @@
-defmodule NewAdmin.PageViewTest do
-  use NewAdmin.ConnCase, async: true
+defmodule TalonDemo.PageViewTest do
+  use TalonDemo.ConnCase, async: true
 end

@@ -1,7 +1,7 @@
-defmodule NewAdmin.TagTest do
-  use NewAdmin.ModelCase
+defmodule TalonDemo.TagTest do
+  use TalonDemo.ModelCase
 
-  alias NewAdmin.Tag
+  alias TalonDemo.Tag
 
   @valid_attrs %{name: "some name"}
   @invalid_attrs %{}

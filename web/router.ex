@@ -1,6 +1,6 @@
-defmodule NewAdmin.Router do
-  use NewAdmin.Web, :router
-  use ExAdmin.Router
+defmodule TalonDemo.Router do
+  use TalonDemo.Web, :router
+  use Talon.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -14,19 +14,19 @@ defmodule NewAdmin.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/admin", NewAdmin do
+  scope "/talon", TalonDemo do
     # pipe_through :api
     pipe_through :browser
-    get "/:resource/search/:search_terms", AdminResourceController, :search
+    get "/:resource/search/:search_terms", TalonResourceController, :search
   end
 
-  scope "/admin", NewAdmin do
+  scope "/talon", TalonDemo do
     pipe_through :browser # Use the default browser stack
-    admin_routes()
-    # get "/:resource", AdminController, :index
+    talon_routes()
+    # get "/:resource", TalonController, :index
   end
 
-  scope "/", NewAdmin do
+  scope "/", TalonDemo do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
@@ -39,7 +39,7 @@ defmodule NewAdmin.Router do
 
 
   # Other scopes may use custom stacks.
-  # scope "/api", NewAdmin do
+  # scope "/api", TalonDemo do
   #   pipe_through :api
   # end
 end
