@@ -38,8 +38,8 @@ defmodule TalonDemo.Mixfile do
      {:gettext, "~> 0.11"},
      {:faker_elixir_octopus, "~> 0.12.0", only: [:dev, :test]},
      {:phoenix_slime, github: "slime-lang/phoenix_slime"},
-     {:talon, path: "../talon", override: true},
-     # {:talon, github: "talonframework/talon", override: true, branch: "server-side-tables"},
+     # {:talon, path: "../talon", override: true},
+     {:talon, github: "talonframework/talon", override: true},
     #  {:ecto_talon, path: "../ecto_talon"},
      {:ecto_talon, github: "talonframework/ecto_talon"},
      {:cowboy, "~> 1.0"}]

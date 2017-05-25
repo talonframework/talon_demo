@@ -24,4 +24,4 @@
   "scrivener": {:hex, :scrivener, "2.3.0", "16b1d744202d47233798205447b35592d96a209241c566304f84ddef63c718b2", [:mix], []},
   "scrivener_ecto": {:hex, :scrivener_ecto, "1.2.1", "dfa1a1584fed47f2280c0e066531edefe23c14bc66183309dfb1f3ed44629e5c", [:mix], [{:ecto, "~> 2.0", [hex: :ecto, optional: false]}, {:postgrex, "~> 0.11.0 or ~> 0.12.0 or ~> 0.13.0", [hex: :postgrex, optional: true]}, {:scrivener, "~> 2.3", [hex: :scrivener, optional: false]}]},
   "slime": {:hex, :slime, "0.16.0", "4f9c677ca37b2817cd10422ecb42c524fe904d3630acf242b81dfe189900272a", [:mix], []},
-  "talon": {:git, "https://github.com/talonframework/talon.git", "5ca344c19f574f6ff3fe2a2e6a26b64231624aa2", [branch: "server-side-tables"]}}
+  "talon": {:git, "https://github.com/talonframework/talon.git", "3b8ea209ea1aff55661852d09cc85a857c4eafb1", []}}
