@@ -39,9 +39,9 @@ defmodule NewAdmin.Mixfile do
      {:faker_elixir_octopus, "~> 0.12.0", only: [:dev, :test]},
      {:phoenix_slime, github: "slime-lang/phoenix_slime"},
     #  {:ex_admin, path: "../ex_admin", override: true},
-     {:ex_admin, github: "ex-admin/ex_admin", override: true, branch: "server-side-tables"},
+     {:ex_admin, github: "talonframework/ex_admin", override: true, branch: "server-side-tables"},
     #  {:ecto_ex_admin, path: "../ecto_ex_admin"},
-     {:ecto_ex_admin, github: "ex-admin/ecto_ex_admin"},
+     {:ecto_ex_admin, github: "talonframework/ecto_ex_admin"},
      {:cowboy, "~> 1.0"}]
   end
 
