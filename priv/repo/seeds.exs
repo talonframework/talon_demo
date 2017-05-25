@@ -40,7 +40,7 @@ states =
   |> List.flatten
 
 _users =
-  for _ <- 1..5000 do
+  for _ <- 1..500 do
     name = Faker.Name.name()
     state = Enum.random(states)
     Repo.insert! User.changeset(%User{},
