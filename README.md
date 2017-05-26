@@ -11,7 +11,7 @@ I have only implemented the User, State, and Country scema's so far. The seeds.e
 git clone https://github.com/talonframework/talon_demo.git
 cd talon_demo
 mix do deps.get, ecto.setup
-npm install
+yarn  # or, npm install
 iex -S mix phx.server
 ```
 
