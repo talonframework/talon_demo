@@ -1,6 +1,5 @@
 defmodule AdminLte.PaginateView do
-  use Phoenix.View, root: "web/templates/talon/admin_lte/components"
-  use Talon.Web, :view
+  use Talon.Web, which: :component_view, theme: "admin_lte", module: AdminLte
 
   import Talon.Components.Paginate
   import Talon.Utils, only: [to_integer: 1]
@@ -16,5 +15,4 @@ defmodule AdminLte.PaginateView do
 
     paginate(link, page_number, page.page_size, page.total_pages, page.total_entries, model_name, show_information: true)
   end
-
 end

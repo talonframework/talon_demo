@@ -3,29 +3,24 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: {
-        "js/app.js": /^(web\/static\/js)|(node_modules)/,
-        'js/jquery-2.2.3.min.js': 'web/static/vendor/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
-        'js/bootstrap.min.js': 'web/static/vendor/admin-lte/bootstrap/js/bootstrap.min.js',
-        'js/jquery.dataTables.js': 'web/static/vendor/admin-lte/plugins/datatables/jquery.dataTables.js',
-        'js/dataTables.bootstrap.js': 'web/static/vendor/admin-lte/plugins/datatables/dataTables.bootstrap.js',
-        'js/app.min.js': 'web/static/vendor/admin-lte/dist/js/app.min.js'
-      },
-      order: {
+        'js/app.js': /^(web\/static\/js)|(node_modules)/,
+        'js/talon/admin_lte/jquery-2.2.3.min.js': 'web/static/vendor/talon/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
+        'js/talon/admin_lte/bootstrap.min.js': 'web/static/vendor/talon/admin-lte/bootstrap/js/bootstrap.min.js',
+        'js/talon/admin_lte/app.min.js': 'web/static/vendor/talon/admin-lte/dist/js/app.min.js'
       }
     },
     stylesheets: {
       joinTo: {
-        "css/app.css": [
-          "web/static/css/app.css",
-          "web/static/vendor/admin-lte/dist/css/skins/all-skins.css",
-          "web/static/vendor/admin-lte/bootstrap/css/bootstrap.min.css",
-          "web/static/vendor/admin-lte/plugins/datatables/dataTables.bootstrap.css",
-          "web/static/vendor/admin-lte/dist/css/AdminLTE.min.css"
-        ],
-        // "css/all_themes.css": [
-        //   "web/static/vendor/admin-lte/dist/css/skins/_all-skins.css"
-        // ]
-
+        'css/app.css': /^(web\/static\/css)/,
+        'css/talon/admin_lte/talon.css': [
+          'web/static/css/talon/admin-lte/talon.css',
+          'web/static/vendor/talon/admin-lte/dist/css/skins/all-skins.css',
+          'web/static/vendor/talon/admin-lte/bootstrap/css/bootstrap.min.css',
+          'web/static/vendor/talon/admin-lte/dist/css/AdminLTE.min.css'
+        ]
+      },
+      order: {
+        after: ["web/static/css/app.css"] // concat app.css last
       }
     },
     templates: {
@@ -67,3 +62,49 @@ exports.config = {
     }
   }
 };
+
+// To add the Talon generated assets to your brunch build, do the following:
+//
+// Replace
+//
+//     javascripts: {
+//       joinTo: "js/app.js"
+//     },
+//
+// With
+//
+//     javascripts: {
+//       joinTo: {
+//         'js/app.js': /^(web\/static\/js)|(node_modules)/,
+//         'js/talon/admin_lte/jquery-2.2.3.min.js': 'web/static/vendor/talon/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
+//         'js/talon/admin_lte/bootstrap.min.js': 'web/static/vendor/talon/admin-lte/bootstrap/js/bootstrap.min.js',
+//         'js/talon/admin_lte/app.min.js': 'web/static/vendor/talon/admin-lte/dist/js/app.min.js'
+//       }
+//     },
+//
+// Replace
+//
+//     stylesheets: {
+//       joinTo: "css/app.css",
+//       order: {
+//         after: ["web/static/css/app.css"] // concat app.css last
+//       }
+//     },
+//
+// With
+//
+//     stylesheets: {
+//       joinTo: {
+//         'css/app.css': /^(web\/static\/css)/,
+//         'css/talon/admin_lte/talon.css': [
+//           'web/static/css/talon/admin-lte/talon.css',
+//           'web/static/vendor/talon/admin-lte/dist/css/skins/all-skins.css',
+//           'web/static/vendor/talon/admin-lte/bootstrap/css/bootstrap.min.css',
+//           'web/static/vendor/talon/admin-lte/dist/css/AdminLTE.min.css'
+//         ]
+//       },
+//       order: {
+//         after: ["web/static/css/app.css"] // concat app.css last
+//       }
+//     },
+//

@@ -1,7 +1,5 @@
 defmodule AdminLte.DatatableView do
-  use Phoenix.View, root: "web/templates/talon/admin_lte/components"
-  use Talon.Web, :view
+  use Talon.Web, which: :component_view, theme: "admin_lte", module: AdminLte
   use Talon.Components.Datatable, __MODULE__
-
 
 end

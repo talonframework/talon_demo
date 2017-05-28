@@ -6,6 +6,7 @@ javascript:
 
   function search_path(value) {
     var route = $('#datatable-body').data('route')
+    // TODO: this needs to be based on the route scope. Should build this with router builders
     return '/talon/' + route + '/search/' + value + '?format.js';
   }
 
@@ -19,7 +20,6 @@ javascript:
     })
     $('body').on('keypress', '#search', function(e) {
       var value = $(this).val() + e.key
-      console.log('search', value);
       $.get(search_path(value), function(html) {
         $('#datatable-body').html(html)
       })
@@ -27,12 +27,9 @@ javascript:
     $('body').on('keyup', '#search', function(e) {
       var value = $(this).val()
       if(e.keyCode == 8) {
-        console.log('key up', value)
         $.get(search_path(value), function(html) {
           $('#datatable-body').html(html)
         })
       }
-
     })
-
   }

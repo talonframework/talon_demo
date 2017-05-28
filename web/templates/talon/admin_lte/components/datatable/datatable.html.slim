@@ -4,7 +4,7 @@
           .row
             .col-sm-9
             .col-sm-3
-              button#go-search.btn.btn-xs.btn-primary type="button" style="float: right; margin-left: 5px;" onClick="go_search()" Go
+              button#go-search.btn.btn-xs.btn-primary type="button" style="float: right; margin-left: 5px;" Go
               input#search type="search" placeholder="Search" style="float: right;"
         .box-body.table-responsived.no-padding
           .paginated_collection
@@ -22,7 +22,7 @@
                 = render "table_body.html", resources: @resources, conn: @conn
               tfoot
                 tr
-                  th.slectable
+                  th.selectable
                     .resource_selection_toggle_cell
                       input.toggle_all#collection_selection_toggle_all type="checkbox" name="collection_selection_toggle_all"
                   = for name <- talon_resource.display_schema_columns(:index) do
@@ -32,4 +32,3 @@
 
         .box-footer.clear-fix
           = AdminLte.PaginateView.paginate(@conn)
-javascript:
