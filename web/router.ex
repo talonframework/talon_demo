@@ -15,12 +15,6 @@ defmodule TalonDemo.Router do
   end
 
   scope "/talon", TalonDemo do
-    # pipe_through :api
-    pipe_through :browser
-    get "/:resource/search/:search_terms", TalonResourceController, :search
-  end
-
-  scope "/talon", TalonDemo do
     pipe_through :browser # Use the default browser stack
     talon_routes()
     # get "/:resource", TalonController, :index
