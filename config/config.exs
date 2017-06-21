@@ -27,3 +27,9 @@ config :logger, :console,
 
 import_config "#{Mix.env}.exs"
 
+config :phoenix, :template_engines,
+  slim: PhoenixSlime.Engine,
+  slime: PhoenixSlime.Engine
+
+import_config "talon.exs"
+
