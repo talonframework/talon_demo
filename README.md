@@ -1,9 +1,10 @@
 # TalonDemo
 
-A sample app used for protying ides for the talon redesign. Don't expect this project to run out of the box. I have added this project for people to see
-some of the concepts that are being worked.
+A sample app used for prototyping ideas for the talon redesign.
 
-I have only implemented the User, State, and Country scema's so far. The seeds.exs file a log of seed data for these schemas.
+I have only implemented the User, State, and Country schema's so far. The seeds.exs file a log of seed data for these schemas.
+
+NOTE: This project has been updated to Phx 1.3 structure.
 
 ## Installation
 
@@ -40,17 +41,14 @@ Before starting to work on anything, please have a quick conversation with @smpa
 - [X] Default admin-lte template
 - [X] Sidenav bar
 - [X] Gettext archecture similar to Coherence
-- [ ] Move the project over to phx-1.3 architecture
+- [X] Move the project over to phx-1.3 architecture
 - [ ] Prototype resource based template overlays
-- [ ] Move the theme based layout templates to a generator
-- [ ] Change the auto generate slime templates to a generator and move the .eex templates to /priv
 - [ ] Create a generator for generating the default template .eex files
 - [X] Implement the create/update/delete actions in the controller
-- [ ] Move the admin template to Talon
 - [X] Fix the brunch problem pulling the the skins
-- [ ] Add database backended support for the index page datatables
+- [X] Add database backended support for the index page datatables
 - [X] Add a show template
-- [ ] Add links to the index page actions
+- [X] Add links to the index page actions
 - [ ] Index page filters (new design required). With live searching on the index page datatables, not sure if the existing Talon design even makes sense anymore.
 - [ ] User new/edit state select should only show options based on the selected country.
 - [ ] Implenent boolean on/off toggle
