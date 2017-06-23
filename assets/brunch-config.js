@@ -61,7 +61,6 @@ exports.config = {
   }
 };
 
-
 // To add the Talon generated assets to your brunch build, do the following:
 //
 // Replace

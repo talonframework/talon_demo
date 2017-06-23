@@ -1,10 +1,11 @@
 
 defmodule TalonDemo.Admin.Accounts.User do
   @moduledoc """
-  Use this file to configure how Talon renders your resource
+  Use this file to configure how Talon renders your resource.
 
   TBD
   """
+  use TalonDemo.Talon.Web, which: :resource
   use Talon.Resource, schema: TalonDemo.Accounts.User, concern: TalonDemo.Admin
 
   def display_schema_columns(:index) do
@@ -54,13 +55,20 @@ defmodule TalonDemo.Admin.Accounts.User do
   # end
 
   # @doc """
-  # Override the default columm nam redering.
+  # Override the default columm name rendering.
   # """
   # def render_column_name(_page, :zip_code), do: "Zip"
   # def render_column_name(_page, :street_num), do: "Num"
   # def render_column_name(page, field) do
   #   # handle redering for the remaining fields
   #   super(page, field)
+  # end
+  #
+  # @doc """
+  # Define how to display an association's name
+  # """
+  # def display_name(resource) do
+  #  resource.field_name
   # end
 
 end
