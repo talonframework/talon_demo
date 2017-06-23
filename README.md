@@ -12,7 +12,9 @@ NOTE: This project has been updated to Phx 1.3 structure.
 git clone https://github.com/talonframework/talon_demo.git
 cd talon_demo
 mix do deps.get, ecto.setup
+cd assets
 yarn  # or, npm install
+cd .. # back to the root
 iex -S mix phx.server
 ```
 
